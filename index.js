@@ -9,7 +9,6 @@ const server = http.createServer((req, res) => {
     __dirname,
     req.url === '/' ? 'index.html' : req.url
   );
-  console.log(req.url);//////////
   let extname = path.extname(filePath);
   let contentType = 'text/html';
   switch(extname) {
@@ -47,4 +46,3 @@ const server = http.createServer((req, res) => {
   })
 });
 server.listen(PORT, () => console.log(`Server running on port ${PORT}`));
-
